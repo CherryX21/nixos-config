@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "name": "NixOS",
+      "path": "/home/sinx/nixos"
+    },
+    {
+      "name": "Dotfiles",
+      "path": "/home/sinx/.config"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": true
+    }
+  }
+}
