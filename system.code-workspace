@@ -2,16 +2,21 @@
   "folders": [
     {
       "name": "NixOS",
-      "path": "/home/sinx/nixos"
+      "path": "/home/sinx/nixos",
     },
     {
       "name": "Dotfiles",
-      "path": "/home/sinx/.config"
-    }
+      "path": "/home/sinx/.config",
+    },
   ],
   "settings": {
     "files.exclude": {
-      "**/.git": true
-    }
-  }
+      "**/.git": true,
+    },
+    "files.associations": {
+      "**/swaync/*.css": "gtk-css",
+      "**/waybar/*.css": "gtk-css",
+      "**/foot/*.css": "gtk-css",
+    },
+  },
 }
