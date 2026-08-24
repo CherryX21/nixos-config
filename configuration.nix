@@ -143,7 +143,7 @@
 
   security.pam.services = {
     greetd.enableGnomeKeyring = true;
-    swaylock = { };
+    hyprlock = { };
   };
 
   # ============================================================================
@@ -185,12 +185,31 @@
     vscode
     vesktop
     stremio-linux-shell
+    libreoffice
+    vlc
+    kdePackages.kdenlive
+    zoom-us
+    obsidian
+
+    # --- Programming / development ---
+    # C / C++
+    gcc
+    gdb
+    cmake
+    ninja
+    clang-tools
+
+    # C#
+    dotnet-sdk_10
 
     # --- File management / GTK ---
     thunar
     papirus-icon-theme
     adwaita-icon-theme
     nwg-look
+    peazip
+    imv
+    zathura
 
     # --- Wayland desktop ---
     foot
@@ -199,11 +218,19 @@
     starship
     awww
     swaybg
-    swaylock
+    hyprlock
     hypridle
     swayosd
     swaynotificationcenter
     xwayland-satellite
+
+    # --- Calendar ---
+    python3
+    python3Packages.pygobject3
+    python3Packages.pycairo
+    python3Packages.babel
+    gtk4
+    gtk4-layer-shell
 
     # --- Theming ---
     matugen
