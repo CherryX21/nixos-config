@@ -1,0 +1,122 @@
+{
+  // ===== Общий редактор =====
+  "editor.fontSize": 14,
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": false,
+
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.indentation": true,
+
+  "editor.renderWhitespace": "boundary",
+  "editor.minimap.enabled": true,
+  "editor.smoothScrolling": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.wordWrap": "off",
+
+  // ===== Файлы =====
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.autoSave": "off",
+
+  // ===== Explorer =====
+  "explorer.confirmDelete": true,
+  "explorer.confirmDragAndDrop": true,
+
+  // ===== Terminal =====
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.fontSize": 13,
+
+  // ===== Prettier =====
+  "prettier.trailingComma": "none",
+
+  // ===== Git =====
+  "git.autofetch": true,
+  "git.confirmSync": true,
+
+  // ===== Nix =====
+  "[nix]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "jnoortheen.nix-ide",
+    "editor.formatOnSave": true,
+  },
+
+  // ===== TOML =====
+  "[toml]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "tamasfe.even-better-toml",
+    "editor.formatOnSave": true,
+  },
+
+  // ===== JSON / JSONC =====
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+  },
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+  },
+
+  // ===== CSS =====
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+  },
+
+  // ===== JavaScript / TypeScript =====
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+  },
+
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+  },
+
+  // ===== C / C++ =====
+  "[c]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.formatOnSave": true,
+  },
+
+  "[cpp]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.formatOnSave": true,
+  },
+
+  // ===== C# =====
+  "[csharp]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+    "editor.formatOnSave": true,
+  },
+
+  // ===== Bash =====
+  "[shellscript]": {
+    "editor.tabSize": 4,
+    "editor.formatOnSave": false,
+  },
+
+  // ===== VS Code =====
+  "workbench.startupEditor": "none",
+  "workbench.settings.editor": "json",
+  "workbench.colorTheme": "Catppuccin Mocha",
+
+  // ===== JSON Schema =====
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+  },
+}

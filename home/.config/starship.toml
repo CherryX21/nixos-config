@@ -1,0 +1,37 @@
+palette = "matugen"
+
+format = "$directory$git_branch$git_status$cmd_duration\n$character"
+
+add_newline = true
+
+[palettes.matugen]
+foreground = "#efdee1"
+primary = "#ffb1c3"
+secondary = "#e4bdc4"
+tertiary = "#edbe92"
+error = "#ffb4ab"
+outline = "#9e8c8f"
+
+[directory]
+format = "[$path]($style) "
+style = "bold primary"
+truncation_length = 3
+truncate_to_repo = false
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+symbol = " "
+style = "bold secondary"
+
+[git_status]
+format = "[$all_status$ahead_behind]($style) "
+style = "tertiary"
+
+[cmd_duration]
+min_time = 1000
+format = "took [$duration]($style) "
+style = "outline"
+
+[character]
+success_symbol = "[❯](bold primary)"
+error_symbol = "[❯](bold error)"

@@ -1,0 +1,33 @@
+window {
+    background: alpha({{colors.surface.dark.hex}}, 0.92);
+    border: 2px solid alpha({{colors.primary.dark.hex}}, 0.75);
+    border-radius: 16px;
+}
+
+#container {
+    margin: 12px;
+}
+
+image {
+    color: {{colors.on_surface.dark.hex}};
+}
+
+progressbar {
+    min-height: 8px;
+}
+
+progressbar trough {
+    min-height: 8px;
+    background: alpha({{colors.surface_container_high.dark.hex}}, 0.8);
+    border-radius: 8px;
+}
+
+progressbar progress {
+    min-height: 8px;
+    background: {{colors.primary.dark.hex}};
+    border-radius: 8px;
+}
+
+label {
+    color: {{colors.on_surface.dark.hex}};
+}

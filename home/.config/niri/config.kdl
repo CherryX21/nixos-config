@@ -1,0 +1,109 @@
+spawn-at-startup "waybar"
+spawn-at-startup "swaybg" "-c" "#111111"
+spawn-at-startup "sh" "-c" "sleep 1; awww-daemon"
+spawn-at-startup "sh" "-c" "sleep 2; ~/.config/scripts/wallpaper-restore.sh"
+spawn-at-startup "sh" "-c" "swayosd-server >/dev/null 2>&1"
+spawn-at-startup "swaync"
+spawn-at-startup "hypridle"
+
+input {
+	focus-follows-mouse max-scroll-amount="0%"
+
+	keyboard{
+		xkb{
+			layout "us,ru,ua"
+			options "grp:alt_shift_toggle"
+		}
+	}
+	touchpad{
+		tap
+		natural-scroll
+		}
+	}
+layout{
+gaps 8
+
+preset-column-widths {
+	proportion 0.3333
+	proportion 0.5
+	proportion 0.66667
+	proportion 1.0
+	}
+focus-ring {
+	width 2
+	active-color "#ffb1c399"
+	inactive-color "#2a222566"
+	}
+}
+
+hotkey-overlay {
+	skip-at-startup
+}
+
+binds{
+	//Apps
+	"Mod+T" {spawn "foot";}
+	"Mod+A" {spawn "fuzzel";}
+	"Mod+B" {spawn "firefox";}
+	"Mod+E" {spawn "thunar";}
+	"Mod+W" { spawn "~/.config/scripts/wallpaper.sh"; }
+
+	//Audio
+	XF86AudioRaiseVolume {
+		spawn "swayosd-client" "--output-volume" "raise";
+	}
+
+	XF86AudioLowerVolume {
+	    spawn "swayosd-client" "--output-volume" "lower";
+	}
+
+	XF86AudioMute {
+	    spawn "swayosd-client" "--output-volume" "mute-toggle";
+	}
+
+	XF86AudioMicMute {
+	    spawn "swayosd-client" "--input-volume" "mute-toggle";
+	}
+
+	//Screenshot
+	"Print" {spawn-sh "grim -g \"$(slurp)\" - | wl-copy";}
+
+	//Windows
+	"Mod+Q" {close-window;}
+
+	"Mod+Left" {focus-column-left;}
+	"Mod+Right" {focus-column-right;}
+	"Mod+Up" {focus-window-up;}
+	"Mod+Down" {focus-window-down;}
+
+	//Width
+	"Mod+Shift+F" {fullscreen-window;}
+	"Mod+F" {maximize-column;}
+	"Mod+Minus" {set-column-width "-10%";}
+	"Mod+Equal" {set-column-width "+10%";}
+
+	"Mod+R" {switch-preset-column-width;}
+
+	//Move windows/columns
+	"Mod+Ctrl+Left" {move-column-left;}
+	"Mod+Ctrl+Right" {move-column-right;}
+	"Mod+Ctrl+Up" {move-window-up;}
+	"Mod+Ctrl+Down" {move-window-down;}
+
+	//Security
+	"Mod+Alt+L" allow-when-locked=true {spawn "hyprlock";}
+
+	//Workspaces
+	"Mod+I" {focus-workspace-up;}
+	"Mod+U" {focus-workspace-down;}
+
+	//Move focused column on another workspace
+	"Mod+Ctrl+I" {move-column-to-workspace-up;}
+	"Mod+Ctrl+U" {move-column-to-workspace-down;}
+
+	//Overview
+	"Mod+O" {toggle-overview;}
+
+	//Niri exit
+	"Mod+Shift+E" {quit;}
+}

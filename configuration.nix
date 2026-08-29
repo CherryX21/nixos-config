@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
+let
+  mycal = pkgs.callPackage ./packages/mycal.nix { };
+in
 {
   # ============================================================================
   # Imports
@@ -225,12 +228,7 @@
     xwayland-satellite
 
     # --- Calendar ---
-    python3
-    python3Packages.pygobject3
-    python3Packages.pycairo
-    python3Packages.babel
-    gtk4
-    gtk4-layer-shell
+    mycal
 
     # --- Theming ---
     matugen
